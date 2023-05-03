@@ -12,6 +12,7 @@ app.set('views', path.join(__dirname, 'views')); //esto es para que el hbs engin
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // Register the location for handlebars partials here:
 
 

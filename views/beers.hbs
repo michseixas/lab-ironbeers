@@ -2,11 +2,17 @@
     <div>  
     <p>Beers Page</p>
     {{#each beers}}
-    <img src="{{this.image_url}}" alt="a beer" class="beer-photo" width="40px">
+    <img src="{{this.image_url}}" alt="a beer" class="beer-photo">
     <h4>
         {{this.name}} 
         {{!-- aqui this es cada elemento. Para cada elemento, pillame el name --}}
     </h4>
+      <h3>
+            {{this.tagline}}
+        </h3>
+        <p>
+            {{this.description}}
+        </p>
     {{/each}}
     </div>
 </div>

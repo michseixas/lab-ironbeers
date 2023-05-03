@@ -1,32 +1,28 @@
-
-<div>
-    <div>  
-    <p>Random Beers Page</p>
-    {{#each beers}}
-    <img src="{{this.image_url}}" alt="a random beer" class="beer-photo" width="100px">
-
-    <h1>
-        {{this.name}} 
-        {{!-- aqui this es cada elemento. Para cada elemento, pillame el name --}}
-    </h1>
-    <h2>
-        {{this.tagline}}
-    </h2>
-    <p>
-        {{this.description}}
-    </p>
-    <h2>
-        {{this.food_pairing}}
-    </h2>
-
-    <h2>
-        {{brewers_tips}}
-    </h2>
-
-    {{/each}}
-
-
+<div class="random-beers">
+    <div class="div-container">
+        {{#each beers}}
+        <div class="div-images"><img src="{{this.image_url}}" alt="a random beer" class="beer-photo"></div>
+        <div class="div-description">
+            <h2>
+                {{this.name}}
+                {{!-- aqui this es cada elemento. Para cada elemento, pillame el name --}}
+            </h2>
+            <h3>
+                {{this.tagline}}
+            </h3>
+            <p>
+                {{this.description}}
+            </p>
+            <h3>Food Pairing</h3>
+            <ul>
+                {{#each this.food_pairing}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <p>
+                {{brewers_tips}}
+            <p>
+        </div>
+        {{/each}}
     </div>
-
-
 </div>
